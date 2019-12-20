@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
+import { NgxQRCodeModule } from 'ngx-qrcode2';
+import { Toasts } from 'src/app/assets/toasts';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +10,20 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(private toastScripts: Toasts,private brcScanner: BarcodeScanner, private ngxScanner: NgxQRCodeModule) {}
+
+
+  scannedCode= null
+  async scanCode() {
+    try{
+      this.brcScanner.scan().then(barcodeData => {
+
+        this.scannedCode = barcodeData.text
+        this.toastScripts.scannerSuccessToast()
+      })
+    }catch(err){
+      console.log(err)
+    }
+  }
 
 }
