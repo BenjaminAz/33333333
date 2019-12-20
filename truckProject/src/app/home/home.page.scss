@@ -2,7 +2,23 @@ ion-header {
     height: 200px;
 }
 
-ion-icon {
-    size: 20px;
+.fab-botton-scanner{
+    margin-top: 80px;
 }
 
+
+.icon-scanner{
+    color: white;
+}
+
+ion-icon{
+    width: 33px;
+    height: 33px;
+    color: rgb(12, 143, 12);
+}
+
+ion-card-title{
+    color: #172097;
+    text-shadow: none;
+    font-size: 15px;
+}
