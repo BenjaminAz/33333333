@@ -19,6 +19,7 @@ export class Toasts {
         toast.present();
     }
 
+
     // Envio de email / recuperar contraseña 
     async emailSendToast() {
         const toast = await this.toastController.create({
