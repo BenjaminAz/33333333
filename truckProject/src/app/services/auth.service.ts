@@ -17,23 +17,4 @@ export class AuthService {
   user: Employee[];
   package: Package[];
   constructor(private Barcode : BarcodeScanner, private NgxDatatable: NgxDatatableModule, private NgxQRScanner: NgxQRCodeComponent) { }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
