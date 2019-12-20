@@ -3,7 +3,19 @@ ion-header {
 }
 
 .fab-botton-scanner{
-    margin-top: 80px;
+    margin-top: 165px;
+}
+
+.user-avatar{
+    display: inline-block;
+    margin-top: 50px;
+    margin-left: 15px;
+}
+
+.user-title{
+    display: inline-block;
+    color: white;
+    text-align: start;
 }
 
 
@@ -21,4 +33,15 @@ ion-card-title{
     color: #172097;
     text-shadow: none;
     font-size: 15px;
+}
+
+ion-header{
+    background: rgba(26,119,217,1);
+    background: -moz-linear-gradient(top, rgba(26,119,217,1) 0%, rgba(154,33,224,1) 64%, rgba(154,33,224,1) 92%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(26,119,217,1)), color-stop(64%, rgba(154,33,224,1)), color-stop(92%, rgba(154,33,224,1)));
+    background: -webkit-linear-gradient(top, rgba(26,119,217,1) 0%, rgba(154,33,224,1) 64%, rgba(154,33,224,1) 92%);
+    background: -o-linear-gradient(top, rgba(26,119,217,1) 0%, rgba(154,33,224,1) 64%, rgba(154,33,224,1) 92%);
+    background: -ms-linear-gradient(top, rgba(26,119,217,1) 0%, rgba(154,33,224,1) 64%, rgba(154,33,224,1) 92%);
+    background: linear-gradient(to bottom, rgba(26,119,217,1) 0%, rgba(154,33,224,1) 64%, rgba(154,33,224,1) 92%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a77d9', endColorstr='#9a21e0', GradientType=0 );
 }
