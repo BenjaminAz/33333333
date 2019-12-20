@@ -6,10 +6,11 @@ export class User {
     firstName: String;
     lastName: String;
     dni: Number;
-    scan: {};
+    scan?: {};
     location: String;
     onTravel: boolean;
     age: Number;
     package?: Package;
     office?: Office;
+    state: String
 }
