@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Package } from '../models/package';
+import { Package } from '../../models/package';
 
 @Component({
   selector: 'app-login',
