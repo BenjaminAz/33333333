@@ -1,4 +1,7 @@
 <ion-header>
+
+  <!-- debemos mostrar en el header un saludo con el nombre de Perfil
+        imagino que sera bindear un dato -->
   <ion-toolbar>
     <ion-avatar>
       <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
@@ -8,6 +11,7 @@
     </ion-title>
   </ion-toolbar>
 
+  <!-- Boton del scanner -->
   <ion-fab class="fab-botton-scanner" vertical="start" horizontal="end" slot="fixed">
     <ion-fab-button color="tertiary">
       <ion-icon class="icon-scanner"  name="qr-scanner"></ion-icon>
@@ -21,6 +25,7 @@
       <ion-row>
         <ion-col>
 
+          <!-- Card para el registro tipo historial -->
           <ion-card class="Card-box">
             <ion-card-header>
               <ion-icon name="paper"></ion-icon>
@@ -32,6 +37,8 @@
           </ion-card>
         </ion-col>
         <ion-col>
+
+          <!-- Card para las entregas pendientes -->
           <ion-card>
             <ion-card-header>
               <ion-icon name="filing"></ion-icon>
@@ -43,6 +50,7 @@
           </ion-card>
         </ion-col>
         <ion-col size="12">
+          <!-- Card para saber que es lo que tiene que recibir y saber por donde va -->
           <ion-card >
             <ion-card-header >
               <ion-icon name="barcode"></ion-icon>
@@ -54,6 +62,7 @@
           </ion-card>
         </ion-col>
         <ion-col size="6">
+          <!-- Falta definir!!! -->
           <ion-card>
             <ion-card-header>
               <ion-icon name="list-box"></ion-icon>
