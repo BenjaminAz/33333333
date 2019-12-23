@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button routerLink='/login' class="show-back-button"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content ion-padding='true'>
+
+
+  <form>
+    <ion-list>
+      <ion-item>
+        <ion-label position="stacked" class="my-label">Email</ion-label>
+        <ion-input type="text" [(ngModel)]="user.user" name="usuario"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked" class="my-label">Contraseña</ion-label>
+        <ion-input type="password" [(ngModel)]="user.password" name="password"></ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-button expand="block" share="round" color="primary" (click)="onRegister()">Registrar</ion-button>
+  </form>
+  
+</ion-content>
