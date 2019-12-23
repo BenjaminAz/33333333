@@ -76,10 +76,10 @@ export class AuthService {
   }
 
   insertUserData(userCredential: firebase.auth.UserCredential) {
-    if(this.newUser.state != 'Cliente' || this.newUser.state != ' Empleado'){
-      this.newUser.role = 'admin'
-    }else if(this.newUser.state == 'Directivo'){
+    if(this.newUser.state != 'Directivo'){
       this.newUser.role = 'user'
+    }else {
+      this.newUser.role = 'admin'
     }
     return this.db.doc(`Users/${userCredential.user.uid}`).set({
       email: this.newUser.email,
