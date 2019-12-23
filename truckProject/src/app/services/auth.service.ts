@@ -1,9 +1,8 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Renderer2, RendererFactory2 } from '@angular/core';
 import { Package } from '../models/package';
 import { Office } from '../models/office';
 import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
-import { NgxDatatableModule } from '@swimlane/ngx-datatable';
-import { NgxQRCodeComponent } from 'ngx-qrcode2';
+
 
 import { User } from '../models/user';
 import { AngularFireAuth } from '@angular/fire/auth';
@@ -21,9 +20,10 @@ export class AuthService {
   userInfo: User[];
   package: Package[];
   office: Office[];
-
-  constructor(private afAuth: AngularFireAuth,private Barcode : BarcodeScanner, private toastSvc: Toasts, private NgxDatatable: NgxDatatableModule, private NgxQRScanner: NgxQRCodeComponent) { 
-    //afAuth.authState.subscribe((user) => (this.isLogged = user));
+  newUser: any;
+  constructor(private afAuth: AngularFireAuth,private Barcode : BarcodeScanner, private toastSvc: Toasts) { 
+    afAuth.authState.subscribe((user) => (this.isLogged = user));
+    
   }
 
 
@@ -61,6 +61,10 @@ async onRegister(user) {
     }
     console.log('Error on register user', error);
   }
+
+ 
+
+  
 }
 
 
