@@ -75,7 +75,14 @@ export class AuthService {
     }
   }
 
+  // envio de data a firestore / database
   insertUserData(userCredential: firebase.auth.UserCredential) {
+    /*
+    Control de asignacion de rol (a mejorar)
+    directivo = admin
+    empleado = user
+    cliente = user
+    */
     if(this.newUser.state != 'Directivo'){
       this.newUser.role = 'user'
     }else {
