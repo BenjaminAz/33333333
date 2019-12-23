@@ -1,8 +1,42 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>login</ion-title>
+    <ion-title>Login</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content ion-padding='true'>
+ 
+  <form>
+    
+    <ion-list >
+      <ion-item>
+        <ion-label position="stacked">
+          <ion-icon name="mail" class="my-label"></ion-icon>
+        </ion-label>
+        <ion-input #userEyeRegister [type]="userTypeInput"  [(ngModel)]="user.email" name="usuario"></ion-input>
+      
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">
+          <ion-icon name="lock" class="my-label"></ion-icon>
+        </ion-label>
+        <ion-input #passwordEyeRegister [type]="passwordTypeInput" [(ngModel)]="user.password" name="contra"></ion-input>
+        <a item-end class="btn_eye_icon" (click)="togglePasswordMode()">
+          <ion-icon [name]="iconpassword"></ion-icon>
+        </a>
+      </ion-item>
+
+      <div class="center">
+        <ion-item lines='none' color="none">
+          <a routerLink='/registration'>Registrar</a>
+        </ion-item>
+      </div>
+
+    </ion-list>
+
+    <ion-button expand="block" share="round" color="primary" (click)="onLogin()">Login</ion-button>
+    
+  </form>
+
 </ion-content>

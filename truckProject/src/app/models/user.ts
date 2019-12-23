@@ -10,6 +10,8 @@ export class User {
     location: String;
     onTravel: boolean;
     age: Number;
+    email: String;
+    password:String;
     package?: Package;
     office?: Office;
     state: String
