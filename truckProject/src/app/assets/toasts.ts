@@ -31,7 +31,6 @@ export class Toasts {
     }
 
 
-
     // campos incompletos / formularios
     async emptyData() {
         const toast = await this.toastController.create({

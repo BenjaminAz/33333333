@@ -9,7 +9,8 @@ export class User {
     scan?: {};
     location: String;
     onTravel: boolean;
-    age: Number;
+    bornDate: Date;
+    phone: Number;
     email: String;
     password:String;
     package?: Package;
