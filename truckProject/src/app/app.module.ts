@@ -7,11 +7,12 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
-import { NgxQRCodeModule } from 'ngx-qrcode2';
+import { NgxQRCodeModule, NgxQRCodeComponent } from 'ngx-qrcode2';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-
+import { HttpClientModule } from '@angular/common/http';
+import {Toasts} from './assets/toasts';
 //Firebase imports
 import { firebaseConfig } from 'src/environments/environment';
 import {AngularFireAuthModule} from '@angular/fire/auth';
@@ -30,7 +31,8 @@ import { AngularFireModule } from '@angular/fire';
     AngularFirestoreModule,
      AppRoutingModule,
      NgxQRCodeModule,
-      NgxDatatableModule
+      NgxDatatableModule,
+      HttpClientModule
     ],
   providers: [
     StatusBar,
@@ -38,7 +40,9 @@ import { AngularFireModule } from '@angular/fire';
     AngularFirestore,
     AngularFireDatabase,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    BarcodeScanner
+    BarcodeScanner,
+    Toasts,
+    NgxQRCodeComponent
   ],
   bootstrap: [AppComponent]
 })
