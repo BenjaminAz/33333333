@@ -30,6 +30,7 @@
     "firebase": "^7.6.1",
     "ngx-barcode-scanner": "0.0.6",
     "ngx-qrcode2": "0.0.9",
+    "node-sass": "^4.13.0",
     "rxjs": "~6.5.1",
     "tslib": "^1.9.0",
     "zone.js": "~0.9.1"

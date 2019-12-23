@@ -11,6 +11,7 @@ import { NgxQRCodeModule } from 'ngx-qrcode2';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 
 //Firebase imports
 import { firebaseConfig } from 'src/environments/environment';
@@ -30,7 +31,8 @@ import { AngularFireModule } from '@angular/fire';
     AngularFirestoreModule,
      AppRoutingModule,
      NgxQRCodeModule,
-      NgxDatatableModule
+      NgxDatatableModule,
+      HttpClientModule
     ],
   providers: [
     StatusBar,
