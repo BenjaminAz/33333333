@@ -1,3 +1,9 @@
+<!--
+
+  REGISTRO DE USUARIO
+
+-->
+
 <ion-header>
   <ion-toolbar color="primary">
     <ion-buttons slot="start">
@@ -13,12 +19,61 @@
   <form>
     <ion-list>
       <ion-item>
+        <ion-label position="stacked" class="my-label">Nombre</ion-label>
+        <ion-input type="text" [(ngModel)]="user.firstName" name="Nombre"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked" class="my-label">Apellido</ion-label>
+        <ion-input type="text" [(ngModel)]="user.lastName" name="Apellido"></ion-input>
+      </ion-item>
+
+      <ion-item>
         <ion-label position="stacked" class="my-label">Email</ion-label>
-        <ion-input type="text" [(ngModel)]="user.user" name="usuario"></ion-input>
+        <ion-input type="text" [(ngModel)]="user.email" name="Email"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked" class="my-label">Tipo de usuario</ion-label>
+        <select [(ngModel)]="user.state"  name="TipoUsuario" id="rol">
+          <option value="Empleado">Empleado</option>
+          <option value="Cliente">Cliente</option>
+          <option value="Directivo">Directivo</option>
+        </select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked" class="my-label">DNI</ion-label>
+        <ion-input type="text" [(ngModel)]="user.dni" name="Dni"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked" class="my-label">Fecha de Nacimiento</ion-label>
+        <ion-input type="date" [(ngModel)]="user.bornDate" name="FechaNacimiento"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked" class="my-label">Localidad</ion-label>
+        <ion-input type="text" [(ngModel)]="user.location" name="localidad"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked" class="my-label">Oficina</ion-label>
+        <ion-input type="text" [(ngModel)]="user.office" name="oficina"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked" class="my-label">Telefono</ion-label>
+        <ion-input type="text" [(ngModel)]="user.phone" name="telefono"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label position="stacked" class="my-label">Contraseña</ion-label>
         <ion-input type="password" [(ngModel)]="user.password" name="password"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked" class="my-label">Confirmar Contraseña</ion-label>
+        <ion-input type="password" [(ngModel)]="cpassword" name="cpassword"></ion-input>
       </ion-item>
     </ion-list>
     <ion-button expand="block" share="round" color="primary" (click)="onRegister()">Registrar</ion-button>

@@ -31,7 +31,6 @@ export class Toasts {
     }
 
 
-
     // campos incompletos / formularios
     async emptyData() {
         const toast = await this.toastController.create({
@@ -42,6 +41,25 @@ export class Toasts {
         toast.present();
     }
 
+
+    // caracteres DNI  / formularios
+    async dniLengthToast() {
+        const toast = await this.toastController.create({
+            message: 'DNI debe contener 8 digitos',
+            duration: 2000,
+            color: 'danger',
+        });
+        toast.present();
+    }
+
+    async phoneLengthToast() {
+        const toast = await this.toastController.create({
+            message: 'Telefono no puede ser menor a 4 digitos',
+            duration: 2000,
+            color: 'danger',
+        });
+        toast.present();
+    }
 
     // email no registrado / login
     async emailNotValidToast() {
