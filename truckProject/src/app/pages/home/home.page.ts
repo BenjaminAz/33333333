@@ -3,6 +3,8 @@ import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { User } from 'src/app/models/user';
+import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
+import { Toasts } from 'src/app/assets/toasts';
 
 @Component({
   selector: 'app-home',
@@ -18,8 +20,9 @@ export class HomePage {
   user: firebase.User;
   userInfo: User;
   users: User[];
+  scannedCode= null;
 
-  constructor(private router: Router, private auth: AuthService, private db: AngularFirestore) { }
+  constructor(private toastSvc: Toasts,private brcScanner: BarcodeScanner,private router: Router, private auth: AuthService, private db: AngularFirestore) { }
 
   ngOnInit() {
     this.auth.getUserState()
@@ -44,6 +47,17 @@ export class HomePage {
     this.db.collection('Users').doc(`${id}`).valueChanges().subscribe((userData: User[]) => {
       this.usersInfo = userData;
     })
+  }
+
+  async scanCode() {
+    try{
+      this.brcScanner.scan().then(barcodeData => {
+        this.scannedCode = barcodeData.text
+        alert(this.scannedCode)
+        this.toastSvc.scannerSuccessToast()
+      })
+    }catch(err){
+    }
   }
 
   //desloguear

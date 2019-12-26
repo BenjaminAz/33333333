@@ -6,17 +6,17 @@
     <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
   </ion-avatar>
   <ion-title class="user-title" *ngIf="user">
-    Hola! {{ userInfo?.firstName }} - 
+    Hola! {{ userInfo?.firstName }} -
     <p>Si conduce beba mucho</p>
   </ion-title>
 
   <ion-buttons vertical="start" horizontal="end">
     <ion-button *ngIf="user" style="color: black;" (click)="logout()">Logout</ion-button>
   </ion-buttons>
-  
+
   <!-- Boton del scanner -->
   <ion-fab class="fab-botton-scanner" vertical="top" horizontal="end" slot="fixed">
-    <ion-fab-button color="tertiary">
+    <ion-fab-button color="tertiary" (click)="scanCode()">
       <ion-icon class="icon-scanner" name="qr-scanner"></ion-icon>
     </ion-fab-button>
   </ion-fab>
@@ -29,64 +29,69 @@
         <ion-col>
 
           <!-- Card para el registro tipo historial -->
-          <ion-card  class="Card-box">
-          <button style="background-color: white;" routerLink="/registration">
-            <ion-card-header>
-              <ion-icon name="paper"></ion-icon>
-              <ion-card-title class="title-card">REGISTRO</ion-card-title>
-            </ion-card-header>
-            <ion-card-content>
-              Ver registro de movimiento
-            </ion-card-content>
-          </button>
+          <ion-card class="Card-box">
+            <button style="background-color: white;" routerLink="/registration">
+              <ion-card-header>
+                <ion-icon name="paper"></ion-icon>
+                <ion-card-title class="title-card">REGISTRO</ion-card-title>
+              </ion-card-header>
+              <ion-card-content>
+                Ver registro de movimiento
+              </ion-card-content>
+            </button>
           </ion-card>
         </ion-col>
         <ion-col>
 
           <!-- Card para las entregas pendientes -->
           <ion-card>
-          <button style="background-color: white;">
-            <ion-card-header>
-              <ion-icon name="filing"></ion-icon>
-              <ion-card-title>PENDIENTE</ion-card-title>
-            </ion-card-header>
-            <ion-card-content>
-              Ver entregas pendientes
-            </ion-card-content>
-          </button>
+            <button style="background-color: white;">
+              <ion-card-header>
+                <ion-icon name="filing"></ion-icon>
+                <ion-card-title>PENDIENTE</ion-card-title>
+              </ion-card-header>
+              <ion-card-content>
+                Ver entregas pendientes
+              </ion-card-content>
+            </button>
           </ion-card>
         </ion-col>
         <ion-col size="12">
           <!-- Card para saber que es lo que tiene que recibir y saber por donde va -->
           <ion-card>
-          <button style="background-color: white;" r>
-            <ion-card-header>
-              <ion-icon name="barcode"></ion-icon>
-              <ion-card-title>¿QUE TENGO QUE RECIBIR?</ion-card-title>
-            </ion-card-header>
-            <ion-card-content>
-              Visualiza las entregas que tengas asignadas y mas
-            </ion-card-content>
+            <button style="background-color: white;" r>
+              <ion-card-header>
+                <ion-icon name="barcode"></ion-icon>
+                <ion-card-title>¿QUE TENGO QUE RECIBIR?</ion-card-title>
+              </ion-card-header>
+              <ion-card-content>
+                Visualiza las entregas que tengas asignadas y mas
+              </ion-card-content>
             </button>
           </ion-card>
         </ion-col>
         <ion-col size="6">
           <!-- Falta definir!!! -->
           <ion-card>
-          <button style="background-color: white;" routerLink="registration">
-            <ion-card-header>
-              <ion-icon name="list-box"></ion-icon>
-              <ion-card-title>REGISTRO</ion-card-title>
-            </ion-card-header>
-            <ion-card-content>
-              Ver registro de movimiento
-            </ion-card-content>
-          </button>
+            <button style="background-color: white;" routerLink="registration">
+              <ion-card-header>
+                <ion-icon name="list-box"></ion-icon>
+                <ion-card-title>REGISTRO</ion-card-title>
+              </ion-card-header>
+              <ion-card-content>
+                Ver registro de movimiento
+              </ion-card-content>
+            </button>
           </ion-card>
         </ion-col>
       </ion-row>
     </ion-grid>
 
+    <!--
+    <ion-card-content>
+      Result from scan: {{scannedCode}}
+    </ion-card-content>
+    -->
 
   </div>
 </ion-content>
