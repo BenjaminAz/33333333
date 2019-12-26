@@ -22,7 +22,7 @@ export class AuthService {
   office: Office[];
   newUser: any;
   constructor(private afAuth: AngularFireAuth,private Barcode : BarcodeScanner, private toastSvc: Toasts) { 
-    afAuth.authState.subscribe((user) => (this.isLogged = user));
+    //afAuth.authState.subscribe((user) => (this.isLogged = user));
     
   }
 

@@ -12,8 +12,6 @@ import { Toasts } from '../../assets/toasts';
 export class RegistrationPage implements OnInit {
 
   user: User = new User();
-
-  
   constructor(private router: Router,private authSvc: AuthService, private toastSvc: Toasts) { }
 
   ngOnInit() {
@@ -35,9 +33,6 @@ export class RegistrationPage implements OnInit {
     }
   }
 
-
-
-  
  
 
 }

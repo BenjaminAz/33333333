@@ -10,17 +10,13 @@
     
     <ion-list >
       <ion-item>
-        <ion-label position="stacked">
-          <ion-icon name="mail" class="my-label"></ion-icon>
-        </ion-label>
+        <ion-label position="stacked" class="my-label">Email</ion-label>
         <ion-input #userEyeRegister [type]="userTypeInput"  [(ngModel)]="user.email" name="usuario"></ion-input>
       
       </ion-item>
 
       <ion-item>
-        <ion-label position="stacked">
-          <ion-icon name="lock" class="my-label"></ion-icon>
-        </ion-label>
+        <ion-label position="stacked" class="my-label">Password</ion-label>
         <ion-input #passwordEyeRegister [type]="passwordTypeInput" [(ngModel)]="user.password" name="contra"></ion-input>
         <a item-end class="btn_eye_icon" (click)="togglePasswordMode()">
           <ion-icon [name]="iconpassword"></ion-icon>
