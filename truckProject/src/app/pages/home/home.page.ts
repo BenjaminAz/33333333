@@ -13,21 +13,23 @@ export class HomePage {
 
   userRole: any;
   usersInfo: User[]
+
+  //obtiene info de usuario / email / uid
   user: firebase.User;
   userInfo: User;
   users: User[];
 
   constructor(private router: Router, private auth: AuthService, private db: AngularFirestore) { }
 
-  ngOninit() {
+  ngOnInit() {
     this.auth.getUserState()
     .subscribe(user => {
       this.user = user;
       this.getUsersRole(this.user.uid)
       console.log(this.user.uid)
+      this.getUsersInfo(this.user.uid)
     });
   }
-
 
   // Obtener rol de usuario
   getUsersRole(id){
