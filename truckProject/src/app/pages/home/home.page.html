@@ -5,10 +5,15 @@
   <ion-avatar class="user-avatar">
     <img src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
   </ion-avatar>
-  <ion-title class="user-title">
-    Hola! Yamil Ali
+  <ion-title class="user-title" *ngIf="user">
+    Hola! {{ user?.email }} - 
+    Si conduce beba mucho
   </ion-title>
 
+  <ion-buttons slot="end">
+    <ion-button *ngIf="user" (click)="logout()">Logout</ion-button>
+  </ion-buttons>
+  
   <!-- Boton del scanner -->
   <ion-fab class="fab-botton-scanner" vertical="start" horizontal="end" slot="fixed">
     <ion-fab-button color="tertiary">

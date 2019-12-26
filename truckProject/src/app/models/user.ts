@@ -3,6 +3,7 @@ import { Office } from './office';
 
 export class User {
     id: String;
+    userName: String;
     firstName: String;
     lastName: String;
     dni: Number;
@@ -13,6 +14,7 @@ export class User {
     phone: Number;
     email: String;
     password:String;
+    role: String;
     package?: Package;
     office?: Office;
     state: String

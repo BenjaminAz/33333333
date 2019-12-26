@@ -47,6 +47,4 @@ export class LoginPage implements OnInit {
 		this.passwordEye.setFocus();
 	}
 
-
-
 }

@@ -18,14 +18,30 @@ export class AuthService {
   public isLogged: any = false;
 
 
-  user: firebase.User;
-  userInfo: User[];
-  package: Package[];
-  office: Office[];
-  newUser: any;
-  constructor(private router : Router,private db: AngularFirestore, private afAuth: AngularFireAuth, private Barcode: BarcodeScanner, private toastSvc: Toasts) {
-    afAuth.authState.subscribe((user) => (this.isLogged = user));
+  private UsersCollection = this.db.collection<User>('Users');
 
+  user: firebase.User;
+
+  userInfo: User[];
+
+  package: Package[];
+
+  office: Office[];
+
+  newUser: any;
+
+  constructor(private router : Router,private db: AngularFirestore, private afAuth: AngularFireAuth, private Barcode: BarcodeScanner, private toastSvc: Toasts) {
+
+    afAuth.authState.subscribe((user) => (this.isLogged = user));
+    this.afAuth.authState.subscribe(user => {
+      if (user) {
+        this.user = user;
+        localStorage.setItem('user', JSON.stringify(this.user.email));
+      } else {
+        localStorage.setItem('user', null);
+      }
+    })
+ 
   }
 
 
@@ -104,5 +120,24 @@ export class AuthService {
       state: this.newUser.state,
       scan: null
     })
+  }
+
+  getUserState() {
+    return this.afAuth.authState;
+  }
+
+  getUser(id: string) {
+    return this.UsersCollection.doc<User>(id).valueChanges()
+  }
+
+  onLogout() {
+    try {
+      console.log('Logout')
+      this.afAuth.auth.signOut()
+      localStorage.setItem('user', null);
+      this.router.navigateByUrl('/login')
+    } catch (error) {
+      console.log(error)
+    }
   }
 }
