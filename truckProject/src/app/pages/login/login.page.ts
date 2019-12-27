@@ -29,7 +29,7 @@ export class LoginPage implements OnInit {
 			this.toastSvc.emptyData();
 		}
 		if (this.user) {
-			console.log('Usuario logeado exitosamente');
+			
 			const user = await this.authSvc.onLogin(this.user);
 		}
 	}
