@@ -20,6 +20,10 @@ const routes: Routes = [
     path: 'my-data',
     loadChildren: () => import('./pages/my-data/my-data.module').then( m => m.MyDataPageModule)
   },
+  {
+    path: 'history',
+    loadChildren: () => import('./pages/history/history.module').then( m => m.HistoryPageModule)
+  },
 
 ];
 
