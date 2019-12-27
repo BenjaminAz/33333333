@@ -11,7 +11,15 @@ const routes: Routes = [
   {
     path: 'registration',
     loadChildren: () => import('./pages/registration/registration.module').then( m => m.RegistrationPageModule)
+  },  {
+    path: 'record',
+    loadChildren: () => import('./pages/record/record.module').then( m => m.RecordPageModule)
   },
+  {
+    path: 'info-view',
+    loadChildren: () => import('./pages/info-view/info-view.module').then( m => m.InfoViewPageModule)
+  },
+
  
 ];
 

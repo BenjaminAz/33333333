@@ -1,0 +1,19 @@
+<ion-header translucent>
+  <ion-toolbar >
+    <ion-buttons slot="start">
+      <ion-back-button routerLink='/home' class="show-back-button"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Historial</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+  <ion-card *ngFor="let card of cards">
+  Numero de envio:<br>
+  Cliente:<br>
+  Destino:<br>
+</ion-card>
+
+</ion-content>
