@@ -1,42 +1,41 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Login</ion-title>
-  </ion-toolbar>
+<ion-header no-border>
+  <div class="login-header ion-padding">
+      <img class="logo-img" src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
+  </div>
 </ion-header>
 
-<ion-content ion-padding='true'>
- 
-  <form>
-    
-    <ion-list >
-      <ion-item>
-        <ion-label position="stacked">
-          <ion-icon name="mail" class="my-label"></ion-icon>
-        </ion-label>
-        <ion-input #userEyeRegister [type]="userTypeInput"  [(ngModel)]="user.email" name="usuario"></ion-input>
-      
-      </ion-item>
+<ion-content>
 
-      <ion-item>
-        <ion-label position="stacked">
-          <ion-icon name="lock" class="my-label"></ion-icon>
-        </ion-label>
-        <ion-input #passwordEyeRegister [type]="passwordTypeInput" [(ngModel)]="user.password" name="contra"></ion-input>
+<div class="center">
+
+  <div heading-column-lr>
+    <h1 big-heading>Login</h1>
+    <h2 routerLink='/registration' small-heading>REGISTRO</h2>
+  </div>
+
+  <div linespace></div>
+
+  <ion-item transparent>
+    <ion-icon name="mail" class="my-label"></ion-icon>
+    <ion-input [(ngModel)]="user.email" placeholder="Email" type="text"></ion-input>
+  </ion-item>
+
+  <ion-item transparent>
+    <ion-icon name="lock" class="my-label"></ion-icon>
+        <ion-input [(ngModel)]="user.password" placeholder="Contraseña" #passwordEyeRegister [type]="passwordTypeInput"></ion-input>
         <a item-end class="btn_eye_icon" (click)="togglePasswordMode()">
           <ion-icon [name]="iconpassword"></ion-icon>
         </a>
-      </ion-item>
+  </ion-item>
+  
+  <ion-label class="forget-password">Olvidó su contraseña</ion-label>
 
-      <div class="center">
-        <ion-item lines='none' color="none">
-          <a routerLink=''>Registrar</a>
-        </ion-item>
-      </div>
-
-    </ion-list>
-
-    <ion-button expand="block" share="round" color="primary" (click)="onLogin()">Login</ion-button>
-    
-  </form>
+  <div linespace></div>
+    <ion-button color="primary" class="ion-button-class" shape="round" 
+      fill="solid" size="large" expand="block" (click)="onLogin()">LOGIN
+    </ion-button>
+  </div>
 
 </ion-content>
+
+

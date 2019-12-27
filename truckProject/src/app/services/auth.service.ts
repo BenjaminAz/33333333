@@ -16,7 +16,7 @@ import { Router } from '@angular/router';
 export class AuthService {
 
   public isLogged: any = false;
-
+  validation = false;
 
   private UsersCollection = this.db.collection<User>('Users');
 
@@ -53,7 +53,12 @@ export class AuthService {
         user.password
       )
         .then(userCredential => {
-
+          this.newUser = user;
+          console.log(userCredential);
+          console.log('Succesfully user login')
+          this.toastSvc.succesfullyLoginToast()
+          this.router.navigateByUrl('/home')
+          this.insertUserData(userCredential)
         })
     } catch (error) {
       var errorCode = error.code;
@@ -61,10 +66,12 @@ export class AuthService {
         this.toastSvc.emailNotValidToast()
       } else if (errorCode == 'auth/user-not-found') {
         this.toastSvc.userNotFound();
-      }
+      }else if (this.validation) {
+				this.toastSvc.userNotFound();
+			}
     }
   }
-
+ 
   //registro
   async onRegister(user) {
     try {
@@ -86,6 +93,8 @@ export class AuthService {
         this.toastSvc.charPasswordToast();
       } else if (error.code == 'auth/email-already-in-use') {
         this.toastSvc.emailUsedToast();
+      } else if (error.code == 'auth/invalid-email') {
+        this.toastSvc.emailNotValidToast();
       }
       console.log('Error on register user', error);
     }

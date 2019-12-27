@@ -91,6 +91,16 @@ export class Toasts {
         toast.present();
     }
 
+    // login exitoso
+    async succesfullyLoginToast() {
+        const toast = await this.toastController.create({
+            message: 'Logeado con exito.',
+            duration: 2000,
+            color: 'success',
+        });
+        toast.present();
+    } 
+
     // operacion exitosa
     async succesfullyOperationToast() {
         const toast = await this.toastController.create({

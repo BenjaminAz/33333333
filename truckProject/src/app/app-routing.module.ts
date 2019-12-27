@@ -14,14 +14,12 @@ const routes: Routes = [
     loadChildren: () => import('./pages/registration/registration.module').then( m => m.RegistrationPageModule)
   },
   {
-    path: 'test' ,canActivate:[AuthGuard],
-    loadChildren: () => import('./pages/test/test.module').then( m => m.TestPageModule)
-  },  {
     path: 'my-data',
     loadChildren: () => import('./pages/my-data/my-data.module').then( m => m.MyDataPageModule)
   },
-
+ 
 ];
+
 
 @NgModule({
   imports: [
