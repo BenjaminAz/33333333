@@ -42,11 +42,6 @@ export class RegistrationPage implements OnInit {
     if (this.user.password != this.cpassword) {
       console.log('Passwords dont match');
       this.toastSvc.passwordDontMatchToast()
-    }else if(
-      this.user.dni.valueOf.length < 8) {
-        this.toastSvc.dniLengthToast()
-    }else if (this.user.phone.valueOf.length < 4){
-      this.toastSvc.phoneLengthToast()
     }
     else {
       const user = await this.authSvc.onRegister(this.user);
