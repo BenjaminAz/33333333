@@ -39,6 +39,7 @@ export class HomePage {
     this.db.collection('Users').doc(`${id}`).valueChanges().subscribe((userData: User) => {
       this.userInfo = userData;
       this.userRole = this.userInfo.role
+      console.log(this.userRole)
     })
   }
 

@@ -1,9 +1,19 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>history</ion-title>
+<ion-header translucent>
+  <ion-toolbar >
+    <ion-buttons slot="start">
+      <ion-back-button routerLink='/home' class="show-back-button"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Historial</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+
+
+<ion-card *ngFor="let package of packages">
+  Id Paquete: {{package.Id}}<br>
+  Cliente:{{package.receptor}}<br>
+  Destino: {{package.destiny}}<br>
+</ion-card>
 
 </ion-content>
