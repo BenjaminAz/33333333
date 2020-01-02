@@ -1,106 +1,25 @@
 ion-content{
-    --background: #e92b2b;
-  }
-  .login-header{
-    background: var(--theme-color);
-  }
+  border-radius: 0em;
+  height: 100vh; // 100 viewport height
+  width: 100vw;
+}
   
-  .logo-img{
-    display: block;
-    width: 120px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  .ion-button-class{
-    --border-radius: 10px;
-    --padding-bottom: 10px;
-    --padding-top: 10px;
-    height: 45px;
-    --background: #ddd;
-    --border-radius: 50px;
-    --box-shadow: none;
-    
-  }
+.login-header{
+  background: var(--theme-color);
+}
   
-  .login-header {
-    position: relative;
-    background: rgba(26,119,217,1);
-    background: -moz-linear-gradient(top, rgba(26,119,217,1) 0%, rgba(154,33,224,1) 64%, rgba(154,33,224,1) 92%);
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(26,119,217,1)), color-stop(64%, rgba(154,33,224,1)), color-stop(92%, rgba(154,33,224,1)));
-    background: -webkit-linear-gradient(top, rgba(26,119,217,1) 0%, rgba(154,33,224,1) 64%, rgba(154,33,224,1) 92%);
-    background: -o-linear-gradient(top, rgba(26,119,217,1) 0%, rgba(154,33,224,1) 64%, rgba(154,33,224,1) 92%);
-    background: -ms-linear-gradient(top, rgba(26,119,217,1) 0%, rgba(154,33,224,1) 64%, rgba(154,33,224,1) 92%);
-    background: linear-gradient(to bottom, rgba(26,119,217,1) 0%, rgba(154,33,224,1) 64%, rgba(154,33,224,1) 92%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a77d9', endColorstr='#9a21e0', GradientType=0 );
-    border-radius: 0em;
-  }
+ion-item{
+  --highlight-color-focused:transparent;
+  --highlight-height:0;
+  --highlight-color-invalid:#000;
+  --highlight-color-valid:#ddd;
+  --min-height: 30px;
+  --padding-start: 0;
+}
   
- 
-  [big-heading]{
-    font-family: "Heebo-Bold" !important;
-    font-size: 30px !important;
-    color:var(--theme-black); 
-  }
-  [small-heading]{
-    font-family: "Heebo-Regular" !important;
-    margin-left: auto;padding-right: 40px; font-size: 15px
-  }
-  [heading-column-lr]{
-  display: flex;
-  -ms-flex-align: center;
-  align-items: center;
-  }
-  
-  .btn_eye_icon{
-    color: var(--ion-color-gra);
-    width: 30px;
-  }
-  
-  [transparent]{
-    --background: transparent;
-  }
-  ion-input{
-    --color: #000;
-    --padding-bottom: 15px;
-    --padding-top: 15px;
-    --padding-start: 5px;
-    font-size: 15px;
-    text-indent: 1px;
-    padding-left: 10px !important;
-  }
-  [icon-small]{
-    width: 30px;
-  }
-  ion-item{
-    --highlight-color-focused:transparent;
-    --highlight-height:0;
-    --highlight-color-invalid:#000;
-    --highlight-color-valid:#ddd;
-    --min-height: 30px;
-    --padding-start: 0;
-  }
-  [linespace]{
-    height: 30px;
-  }
-  
-  
-  ion-label{
-        color:#000;
-        opacity: .8;
-        font-size: 13px;
-        display: block;
-    }
-  .forget-password{
-    color: #000;
-      font-size: 15px;
-      display: block;
-      text-align: right;
-      padding: 10px;
-  }
-
-  .xxx-card{
-    border: 2px solid rgb(181, 6, 204);
-    margin:10px auto;
-    border-radius: 10px !important;
-    width: 90% ;
-    }
+.package-card{
+  border: 2px solid rgb(181, 6, 204);
+  margin:10px auto;
+  border-radius: 10px !important;
+  width: 90% ;
+}
