@@ -33,7 +33,7 @@ export class RegistrationPage implements OnInit {
      this.user.location == null ||
      this.user.phone == null ||
      this.user.state == null ||
-     this.user.state == '' || 
+     this.user.state == '' ||
      this.user.bornDate == null ||
      this.user.dni == null
      ){
