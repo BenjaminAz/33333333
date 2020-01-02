@@ -1,5 +1,5 @@
 ion-content{
-    --background: #fafafa;
+    --background: #e92b2b;
   }
   .login-header{
     background: var(--theme-color);
@@ -76,7 +76,7 @@ ion-content{
     --highlight-height:0;
     --highlight-color-invalid:#000;
     --highlight-color-valid:#ddd;
-    --min-height: 65px;
+    --min-height: 30px;
     --padding-start: 0;
   }
   [linespace]{
@@ -98,3 +98,9 @@ ion-content{
       padding: 10px;
   }
 
+  .xxx-card{
+    border: 2px solid rgb(181, 6, 204);
+    margin:10px auto;
+    border-radius: 10px !important;
+    width: 90% ;
+    }
