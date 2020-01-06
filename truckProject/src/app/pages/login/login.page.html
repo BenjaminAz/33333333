@@ -1,4 +1,4 @@
-<ion-header no-border>
+<ion-header class="gradient-color" no-border>
   <div class="login-header ion-padding">
       <img class="logo-img" src="https://gravatar.com/avatar/dba6bae8c566f9d4041fb9cd9ada7741?d=identicon&f=y">
   </div>
@@ -19,7 +19,7 @@
     <ion-icon name="mail" class="my-label"></ion-icon>
     <ion-input [(ngModel)]="user.email" placeholder="Email" type="text"></ion-input>
   </ion-item>
-
+ 
   <ion-item transparent>
     <ion-icon name="lock" class="my-label"></ion-icon>
         <ion-input [(ngModel)]="user.password" placeholder="Contraseña" #passwordEyeRegister [type]="passwordTypeInput"></ion-input>

@@ -1,9 +1,7 @@
 ion-content{
     --background: #fafafa;
   }
-  .login-header{
-    background: var(--theme-color);
-  }
+  
   
   .logo-img{
     display: block;
@@ -16,7 +14,7 @@ ion-content{
     --padding-bottom: 10px;
     --padding-top: 10px;
     height: 45px;
-    --background: #ddd;
+    
     --border-radius: 50px;
     --box-shadow: none;
     
@@ -24,14 +22,6 @@ ion-content{
   
   .login-header {
     position: relative;
-    background: rgba(26,119,217,1);
-    background: -moz-linear-gradient(top, rgba(26,119,217,1) 0%, rgba(154,33,224,1) 64%, rgba(154,33,224,1) 92%);
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(26,119,217,1)), color-stop(64%, rgba(154,33,224,1)), color-stop(92%, rgba(154,33,224,1)));
-    background: -webkit-linear-gradient(top, rgba(26,119,217,1) 0%, rgba(154,33,224,1) 64%, rgba(154,33,224,1) 92%);
-    background: -o-linear-gradient(top, rgba(26,119,217,1) 0%, rgba(154,33,224,1) 64%, rgba(154,33,224,1) 92%);
-    background: -ms-linear-gradient(top, rgba(26,119,217,1) 0%, rgba(154,33,224,1) 64%, rgba(154,33,224,1) 92%);
-    background: linear-gradient(to bottom, rgba(26,119,217,1) 0%, rgba(154,33,224,1) 64%, rgba(154,33,224,1) 92%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a77d9', endColorstr='#9a21e0', GradientType=0 );
     border-radius: 0em;
   }
   
@@ -83,7 +73,6 @@ ion-content{
     height: 30px;
   }
   
-  
   ion-label{
         color:#000;
         opacity: .8;
@@ -97,4 +86,5 @@ ion-content{
       text-align: right;
       padding: 10px;
   }
+
 

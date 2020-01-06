@@ -15,66 +15,67 @@
 
 <ion-content ion-padding='true'>
 
-
   <form>
     <ion-list>
       <ion-item>
-        <ion-label position="stacked" class="my-label">Nombre</ion-label>
-        <ion-input type="text" [(ngModel)]="user.firstName" name="Nombre"></ion-input>
+        <ion-label color="primary" position="floating">Nombre</ion-label>
+        <ion-input autocorrect="on" autofocus="on" clearInput="true" clearOnEdit="true" color="primary" inputmode="text"  [(ngModel)]="user.firstName" name="Nombre" placeholder="Nombre" required="true"></ion-input>
+      </ion-item>
+     
+      <ion-item>
+        <ion-label color="primary" position="floating">Apellido</ion-label>
+        <ion-input autocorrect="on" autofocus="on" clearInput="true" clearOnEdit="true" color="primary" inputmode="text"  placeholder="Apellido" [(ngModel)]="user.lastName" name="Apellido" required="true"></ion-input>
+      </ion-item>
+     
+      <ion-item>
+        <ion-label color="primary" position="floating">Email</ion-label>
+        <ion-input autocorrect="on" autofocus="on" clearInput="true" clearOnEdit="true" color="primary" inputmode="text"  placeholder="Email" [(ngModel)]="user.email" name="Email" required="true"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label color="primary" position="stacked" class="my-label">Tipo de usuario</ion-label>
+        <ion-select [(ngModel)]="user.state" name="TipoUsuario" id="rol">
+          <ion-select-option  value="Empleado">Empleado</ion-select-option>
+          <ion-select-option  value="Cliente">Cliente</ion-select-option>
+          <ion-select-option  value="Directivo">Directivo</ion-select-option>
+        </ion-select >
       </ion-item>
 
       <ion-item>
-        <ion-label position="stacked" class="my-label">Apellido</ion-label>
-        <ion-input type="text" [(ngModel)]="user.lastName" name="Apellido"></ion-input>
+        <ion-label color="primary" position="floating">Email</ion-label>
+        <ion-input autocorrect="on" autofocus="on" clearInput="true" clearOnEdit="true" color="primary" inputmode="text"  placeholder="DNI" [(ngModel)]="user.dni" name="Dni" required="true"></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-label position="stacked" class="my-label">Email</ion-label>
-        <ion-input type="text" [(ngModel)]="user.email" name="Email"></ion-input>
+        <ion-label color="primary" position="stacked">Fecha de nacimiento</ion-label>
+        <ion-input type="date" color="primary" autofocus="on" [(ngModel)]="user.bornDate" name="FechaNacimiento"></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-label position="stacked" class="my-label">Tipo de usuario</ion-label>
-        <select [(ngModel)]="user.state"  name="TipoUsuario" id="rol">
-          <option value="Empleado">Empleado</option>
-          <option value="Cliente">Cliente</option>
-          <option value="Directivo">Directivo</option>
-        </select>
+        <ion-label color="primary" position="floating">Localidad</ion-label>
+        <ion-input autocorrect="on" autofocus="on" clearInput="true" clearOnEdit="true" color="primary" inputmode="text"  placeholder="Localidad" [(ngModel)]="user.location" name="localidad" required="true"></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-label position="stacked" class="my-label">DNI</ion-label>
-        <ion-input type="text" [(ngModel)]="user.dni" name="Dni"></ion-input>
+        <ion-label color="primary" position="floating">Oficina</ion-label>
+        <ion-input autocorrect="on" autofocus="on" clearInput="true" clearOnEdit="true" color="primary" inputmode="text"  placeholder="Oficina" [(ngModel)]="user.office" name="oficina" required="true"></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-label position="stacked" class="my-label">Fecha de Nacimiento</ion-label>
-        <ion-input type="date" [(ngModel)]="user.bornDate" name="FechaNacimiento"></ion-input>
+        <ion-label color="primary" position="floating">Telefono</ion-label>
+        <ion-input autocorrect="on" autofocus="on" clearInput="true" clearOnEdit="true" color="primary" inputmode="text"  placeholder="Telefono" [(ngModel)]="user.phone" name="telefono" required="true"></ion-input>
       </ion-item>
-
+      
       <ion-item>
-        <ion-label position="stacked" class="my-label">Localidad</ion-label>
-        <ion-input type="text" [(ngModel)]="user.location" name="localidad"></ion-input>
+        <ion-label color="primary" position="floating">Contraseña</ion-label>
+        <ion-input autocorrect="on" autofocus="on" clearInput="true" clearOnEdit="true" color="primary" inputmode="text"  placeholder="Contraseña" [(ngModel)]="user.password" name="password" required="true"></ion-input>
       </ion-item>
-
+   
       <ion-item>
-        <ion-label position="stacked" class="my-label">Oficina</ion-label>
-        <ion-input type="text" [(ngModel)]="user.office" name="oficina"></ion-input>
+        <ion-label color="primary" position="floating">Confirmar Contraseña</ion-label>
+        <ion-input autocorrect="on" autofocus="on" clearInput="true" clearOnEdit="true" color="primary" inputmode="text"  placeholder="Contraseña" [(ngModel)]="cpassword" name="cpassword" required="true"></ion-input>
       </ion-item>
-
-      <ion-item>
-        <ion-label position="stacked" class="my-label">Telefono</ion-label>
-        <ion-input type="text" [(ngModel)]="user.phone" name="telefono"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label position="stacked" class="my-label">Contraseña</ion-label>
-        <ion-input type="password" [(ngModel)]="user.password" name="password"></ion-input>
-      </ion-item>
-
-      <ion-item>
-        <ion-label position="stacked" class="my-label">Confirmar Contraseña</ion-label>
-        <ion-input type="password" [(ngModel)]="cpassword" name="cpassword"></ion-input>
-      </ion-item>
+     
     </ion-list>
     <ion-button expand="block" share="round" color="primary" (click)="onRegister()">Registrar</ion-button>
   </form>
